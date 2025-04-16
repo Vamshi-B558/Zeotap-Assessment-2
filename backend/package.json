@@ -1,0 +1,25 @@
+{
+  "name": "clickhouse-flatfile-ingestion-backend",
+  "version": "1.0.0",
+  "description": "Backend for Bidirectional ClickHouse & Flat File Data Ingestion Tool",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "clickhouse": "^2.4.0",
+    "clickhouse-flatfile-ingestion-backend": "file:",
+    "cors": "^2.8.5",
+    "csv-parser": "^3.2.0",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  },
+  "author": "",
+  "license": "ISC"
+}

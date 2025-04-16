@@ -1,0 +1,20 @@
+services:
+  backend:
+    build:
+      context: ./clickhouse-flatfile-ingestion-tool
+      dockerfile: Dockerfile.backend
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./clickhouse-flatfile-ingestion-tool/backend:/usr/src/app
+    environment:
+      - NODE_ENV=development
+
+  frontend:
+    build:
+      context: ./clickhouse-flatfile-ingestion-tool
+      dockerfile: Dockerfile.frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
